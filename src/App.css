@@ -1,38 +1,44 @@
-.App {
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100;300&display=swap");
+
+:root {
+    --dark-orange: #a46e02;
+    --dark-brown: #433426;
+    --mustard: #d0a600;
+    --hotelCardBg: #ffffff;
+    --submitColor: #089708;
+    --backgroundColor: #f8f5f1;
+    --lightGrey: #adadad;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+* {
+    box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+html {
+    position: relative;
+    min-height: 100%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+body {
+    background-color: #f8f5f1;
+    background-image: url("./images//background.png");
+    background-size: cover;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
-.App-link {
-  color: #61dafb;
+h1,
+h2 {
+    text-align: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+a {
+    text-decoration: none;
 }
+
+/*
+font-family: 'Baloo Tammudu 2', cursive;
+font-family: 'Roboto', sans-serif;
+
+
+*/

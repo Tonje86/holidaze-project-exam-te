@@ -1,0 +1,52 @@
+.cardContainer {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.messageCards {
+    font-family: "Roboto", sans-serif;
+    font-size: 18px;
+    background-color: var(--hotelCardBg);
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    max-width: 50%;
+    min-width: 300px;
+    width: 100%;
+    margin: 20px;
+    text-align: center;
+}
+
+.messageName {
+    font-size: 20px;
+    font-weight: 600;
+    margin-top: 20px;
+    color: var(--mustard);
+}
+
+.message {
+    margin: 20px;
+}
+
+.date {
+    font-size: 14px;
+    color: var(--lightGrey);
+}
+
+.replyBtn {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    margin: 30px auto;
+    color: var(--dark-orange);
+    border: 1px solid var(--dark-orange);
+    border-radius: 5px;
+    padding: 10px;
+    width: 200px;
+    font-size: 20px;
+}
+
+.replyBtn:hover {
+    background-color: var(--mustard);
+    color: #fff;
+}

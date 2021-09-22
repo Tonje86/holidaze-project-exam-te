@@ -1,0 +1,47 @@
+form {
+    margin-bottom: 80px;
+}
+
+.messageForm {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.messageForm label,
+.messageForm input,
+.messageForm textarea {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    min-width: 200px;
+    max-width: 700px;
+}
+
+.messageForm input,
+.messageForm textarea {
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.messageForm textarea {
+    min-height: 100px;
+}
+
+.submitBtn {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background-color: var(--mustard);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.submitBtn:hover {
+    background-color: var(--submitColor);
+}

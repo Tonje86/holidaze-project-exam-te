@@ -1,0 +1,20 @@
+.contactCards {
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    width: 50%;
+    min-width: 300px;
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: #fff;
+    padding: 10px;
+}
+
+.contactCards h1 {
+    margin: 0px;
+}
+
+.contactText {
+    text-align: center;
+    font-family: "Baloo Tammudu 2", cursive;
+    font-size: 24px;
+}

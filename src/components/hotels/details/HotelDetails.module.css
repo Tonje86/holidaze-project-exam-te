@@ -1,0 +1,52 @@
+.backLink {
+    color: var(--mustard);
+}
+
+.backLink:hover {
+    color: var(--dark-orange);
+}
+
+.detailCardImg {
+    margin: 10px auto;
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.detailCard {
+    background-color: var(--hotelCardBg);
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    width: 70%;
+    max-width: 700px;
+    min-width: 300px;
+    margin: 20px auto;
+    padding: 15px 30px;
+}
+
+.detailListUl {
+    color: var(--dark-orange);
+}
+
+.detailListLi {
+    list-style-type: disc;
+    padding: 5px;
+}
+
+.bookBtn {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    font-size: 18px;
+    background-color: var(--mustard);
+    color: #fff;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 5px;
+    padding: 15px;
+    width: 90%;
+}
+
+.bookBtn:hover {
+    background-color: var(--dark-orange);
+}

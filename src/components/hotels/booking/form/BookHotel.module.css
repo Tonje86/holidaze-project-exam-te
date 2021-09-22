@@ -1,0 +1,86 @@
+.backLink {
+    color: var(--mustard);
+}
+
+.backLink:hover {
+    color: var(--dark-orange);
+}
+
+.detailCard {
+    background-color: var(--hotelCardBg);
+    border: 1px solid var(--mustard);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+.price {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0px;
+    text-align: right;
+    border-top: 1px solid var(--mustard);
+    padding-top: 10px;
+}
+
+li .price {
+    margin-top: 20px;
+}
+
+.detailListUl {
+    color: var(--dark-orange);
+    padding: 0px;
+}
+
+.detailListLi {
+    list-style-type: none;
+    padding: 5px;
+}
+
+.bookForm {
+    background-color: #fff;
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    width: 50%;
+    min-width: 300px;
+    margin: 40px auto;
+    padding: 40px;
+}
+
+.bookingForm label,
+.bookingForm input,
+.bookingForm textarea {
+    display: block;
+    width: 100%;
+    margin: 10px auto;
+    min-width: 200px;
+    max-width: 700px;
+    border-radius: 5px;
+}
+
+.bookingForm input,
+.bookingForm textarea {
+    border: 1px solid var(--dark-brown);
+    padding: 10px;
+}
+
+.submitBtn {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background-color: var(--mustard);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin: 20px auto;
+    font-size: 20px;
+}
+
+.submitBtn:hover {
+    background-color: var(--submitColor);
+}

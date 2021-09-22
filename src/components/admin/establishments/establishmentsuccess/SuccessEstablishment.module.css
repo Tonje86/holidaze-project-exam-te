@@ -1,0 +1,39 @@
+.container {
+    width: 50%;
+    margin: 20px auto;
+}
+
+.newEstablishmentsBtn {
+    all: unset;
+    cursor: pointer;
+    width: 96%;
+    text-align: center;
+    background-color: var(--mustard);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.newEstablishments:hover,
+.returnBtn:hover {
+    background-color: var(--dark-orange);
+    color: #fff;
+}
+
+.returnBtn {
+    all: unset;
+    cursor: pointer;
+    width: 96%;
+    text-align: center;
+    background-color: #fff;
+    color: var(--mustard);
+    border: 1px solid var(--mustard);
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 18px;
+    margin: 20px auto;
+    justify-content: center;
+}

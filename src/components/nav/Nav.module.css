@@ -1,0 +1,127 @@
+.nav {
+    width: 100%;
+}
+
+.border {
+    border-bottom: 1px solid var(--dark-brown);
+    width: 100%;
+    margin-top: 20px;
+}
+
+.logo {
+    max-width: 150px;
+    padding: 20px 40px 0px 20px;
+}
+
+.bed,
+.contact {
+    max-width: 110px;
+    padding: 20px;
+}
+
+.login {
+    max-width: 80px;
+    padding: 20px;
+}
+
+.bed:hover,
+.contact:hover,
+.login:hover,
+.loginactive:hover {
+    cursor: pointer;
+    border: 2px solid var(--dark-brown);
+    border-radius: 3px;
+    padding: 10px;
+}
+
+.active {
+    border-bottom: 2px solid var(--mustard);
+}
+
+.loginactive {
+    max-width: 80px;
+    padding: 20px;
+}
+
+.logoutBtn {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    background-color: #fff;
+    color: var(--dark-brown);
+    text-align: center;
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 10px;
+    width: 140px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.logoutBtn:hover {
+    background-color: var(--mustard);
+}
+
+.adminBtns {
+    all: unset;
+    background-color: #fff;
+    color: var(--dark-orange);
+    border: 1px solid var(--dark-orange);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.adminBtns:hover {
+    background-color: var(--dark-orange);
+    color: #fff;
+}
+
+.adminactive button {
+    border: 2px solid var(--dark-orange);
+    font-weight: 500;
+}
+
+/*------------------------------------ Smaller screens----------------------------------- */
+
+@media screen and (max-width: 700px) {
+    .adminBtns {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .bed,
+    .contact {
+        width: 90px;
+    }
+
+    .login {
+        width: 70px;
+    }
+
+    .logo {
+        width: 130px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .bed,
+    .contact {
+        width: 80px;
+    }
+
+    .login {
+        width: 60px;
+    }
+
+    .logo {
+        width: 110px;
+    }
+
+    .loginactive {
+        width: 70px;
+    }
+}

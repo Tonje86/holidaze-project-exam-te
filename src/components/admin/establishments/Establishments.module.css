@@ -1,0 +1,91 @@
+.hotelForm {
+    width: 50%;
+    margin: 0px auto;
+}
+
+.hotelForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+.hotelForm input,
+.hotelForm textarea {
+    background-color: #fff;
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px auto;
+    display: block;
+    width: 100%;
+    min-width: 200px;
+    max-width: 700px;
+}
+
+.submitBtn {
+    all: unset;
+    cursor: pointer;
+    width: 100%;
+    text-align: center;
+    background-color: var(--mustard);
+    color: #fff;
+    border-radius: 5px;
+    padding: 10px 0px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    font-size: 20px;
+}
+
+.submitBtn:hover {
+    background-color: var(--submitColor);
+}
+
+span {
+    color: red;
+    font-weight: 600;
+}
+
+.radioBtns {
+    background-color: #ffffff;
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    min-width: 200px;
+    display: flex;
+}
+
+.radioBtns label {
+    border: 1px solid var(--dark-orange);
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+    width: 100px;
+}
+
+.radioBtns input[type="radio"] {
+    visibility: hidden;
+    position: fixed;
+}
+
+.radioBtns label:hover {
+    background-color: var(--dark-orange);
+    color: #ffffff;
+}
+
+.radioBtns input[type="radio"]:checked ~ label {
+    color: #ffffff;
+    font-weight: 600;
+    border: 1px solid var(--dark-orange);
+    background-color: var(--dark-orange);
+}
+
+/*-------------------------------- Responsive --------------------------------------*/
+
+@media screen and (max-width: 500px) {
+    .radioBtns label {
+        width: 70px;
+    }
+}

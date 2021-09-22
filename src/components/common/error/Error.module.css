@@ -1,0 +1,16 @@
+.container {
+    width: 50%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.textBox {
+    margin-top: 50px;
+    padding: 40px;
+    border: 1px solid red;
+    border-radius: 5px;
+    text-align: center;
+    background-color: #fff;
+    color: red;
+    font-size: clamp(1.3rem, 2.5vw, 2rem);
+}

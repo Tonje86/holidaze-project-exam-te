@@ -1,0 +1,9 @@
+.heading h1 {
+    font-size: 80px;
+}
+
+@media screen and (max-width: 500px) {
+    .heading h1 {
+        font-size: 50px;
+    }
+}
