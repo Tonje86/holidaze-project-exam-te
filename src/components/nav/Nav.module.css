@@ -63,6 +63,8 @@
     background-color: var(--mustard);
 }
 
+/*------------------------------ Admin nav ----------------------------- */
+
 .adminBtns {
     all: unset;
     background-color: #fff;

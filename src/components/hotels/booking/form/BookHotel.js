@@ -102,6 +102,12 @@ function BookHotel() {
         }
     }
 
+    if (hotel.breakfast_included === true) {
+        hotel.breakfast_included = "Breakfast included";
+    } else if (hotel.breakfast_included === false) {
+        hotel.breakfast_included = "Breakfast costs extra";
+    }
+
     return (
         <>
             {submitting}
@@ -142,7 +148,7 @@ function BookHotel() {
                     <div className={styles.detailCard}>
                         <ul className={styles.detailListUl}>
                             <li className={styles.detailListLi}>- {hotel.location}</li>
-                            <li className={styles.detailListLi}>- Breakfast included: {hotel.breakfast}</li>
+                            <li className={styles.detailListLi}>- {hotel.breakfast_included}</li>
                             <li className={styles.detailListLi}>- Roomsize: {hotel.roomsize}kvm</li>
                             <li className={styles.price}>Price: {hotel.price} NOK</li>
                         </ul>

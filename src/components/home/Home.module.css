@@ -1,5 +1,6 @@
 .container h1 {
     font-size: 70px;
+    margin-bottom: 0px;
 }
 
 @media screen and (max-width: 500px) {

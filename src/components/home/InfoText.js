@@ -5,14 +5,20 @@ function InfoText() {
     return (
         <>
             <div className={styles.container}>
-                <p className={styles.infoText}>We are here to help you to find the best stay in Bergen that suits your needs and budget.</p>
                 <p className={styles.infoText}>
+                    We are here to help you{" "}
+                    <Link to="/hotels" className={styles.contactLink}>
+                        find{" "}
+                    </Link>{" "}
+                    the best stay in Bergen that suits your needs and budget.
+                </p>
+                {/* <p className={styles.infoText}>
                     You can search and book hotels, bed and breakfast and guesthouses. Do not hesitate to{" "}
                     <Link to="/contact" className={styles.contactLink}>
                         contact us
-                    </Link>
+                    </Link>{" "}
                     if you have questions.
-                </p>
+                </p> */}
             </div>
         </>
     );
