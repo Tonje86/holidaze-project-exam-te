@@ -1,4 +1,3 @@
-// import AddMessage from "./messages/Message";
 import MainHeading from "../../typography/MainHeading";
 import MessageForm from "./messages/MessageForm";
 import styles from "./Contact.module.css";
