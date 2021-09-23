@@ -1,5 +1,6 @@
 .nav {
     width: 100%;
+    margin-top: 20px;
 }
 
 .border {
@@ -9,32 +10,34 @@
 }
 
 .logo {
-    max-width: 150px;
-    padding: 20px 40px 0px 20px;
+    max-width: 170px;
+    padding: 25px 40px 0px 20px;
 }
 
 .bed,
 .contact {
     max-width: 110px;
     padding: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
 .login {
     max-width: 80px;
-    padding: 20px;
+    padding: 15px;
 }
 
 .bed:hover,
 .contact:hover,
 .login:hover {
     cursor: pointer;
-    border-bottom: 3px solid var(--mustard);
+    border: 3px solid var(--dark-brown);
     border-radius: 3px;
     padding: 10px;
 }
 
 .active {
-    border-bottom: 3px solid var(--mustard);
+    border-bottom: 3px solid var(--dark-brown);
 }
 
 /*------------------------------ Admin icons nav ----------------------------- */
@@ -72,10 +75,12 @@
 
 /*------------------------------------ Smaller screens----------------------------------- */
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
     .bed,
     .contact {
         width: 90px;
+        margin-right: 0px;
+        margin-left: 0px;
     }
 
     .login {

@@ -3,6 +3,11 @@
     margin-bottom: 0px;
 }
 
+.container {
+    width: 100%;
+    padding: 20px;
+}
+
 @media screen and (max-width: 500px) {
     .container h1 {
         font-size: 50px;

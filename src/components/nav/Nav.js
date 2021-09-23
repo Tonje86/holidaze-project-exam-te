@@ -2,11 +2,11 @@ import React from "react";
 import { NavLink, useHistory } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
-import logo from "../../holidaze_logo.svg";
+import logo from "../../icons/holidaze-logo.svg";
 import hotelbed from "../../icons/hotelbed.svg";
-import contact from "../../icons/contact.svg";
-import login from "../../icons/login.svg";
-import loggingout from "../../icons/logouticon.svg";
+import contact from "../../icons/contact-envelope.svg";
+import login from "../../icons/login-icon.svg";
+import loggingout from "../../icons/logout-icon.svg";
 import bookings from "../../icons/customer-bookings.svg";
 import messages from "../../icons/customer-messages.svg";
 import newhotel from "../../icons/new-establishments.svg";
@@ -60,7 +60,7 @@ function Nav() {
                         </NavLink>
                     )}
                 </div>
-                <div className={styles.border}></div>
+                {/* <div className={styles.border}></div> */}
             </nav>
         </>
     );
