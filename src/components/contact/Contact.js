@@ -5,9 +5,8 @@ import styles from "./Contact.module.css";
 function Contact() {
     return (
         <>
-            <div>
-                <MessageForm />
-
+            <MessageForm />
+            <div className={styles.contactContainer}>
                 <div className={styles.contactCards}>
                     <MainHeading title="Call us" />
                     <p className={styles.contactText}>+47 123 45 678</p>
