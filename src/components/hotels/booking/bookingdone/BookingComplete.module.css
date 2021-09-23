@@ -15,8 +15,7 @@
     border-radius: 5px;
     padding: 10px 0px;
     font-size: 20px;
-    margin: 40px auto;
-    justify-content: center;
+    margin-top: 40px;
 }
 
 .returnBtn:hover {
