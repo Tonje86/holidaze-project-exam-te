@@ -3,13 +3,13 @@ import { NavLink, useHistory } from "react-router-dom";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthContext";
 import logo from "../../holidaze_logo.svg";
-import bed from "../../icons/Bed.svg";
-import contact from "../../icons/Contact.svg";
+import hotelbed from "../../icons/hotelbed.svg";
+import contact from "../../icons/contact.svg";
 import login from "../../icons/login.svg";
-import loginactive from "../../icons/Loginactive.svg";
-import bookings from "../../icons/SVG/seng.svg";
-import messages from "../../icons/SVG/brev.svg";
-import newhotel from "../../icons/SVG/ramme.svg";
+import loggingout from "../../icons/logouticon.svg";
+import bookings from "../../icons/customer-bookings.svg";
+import messages from "../../icons/customer-messages.svg";
+import newhotel from "../../icons/new-establishments.svg";
 import styles from "./Nav.module.css";
 
 function Nav() {
@@ -30,7 +30,7 @@ function Nav() {
                         <img className={styles.logo} src={logo} alt="Holidaze logo" />
                     </NavLink>
                     <NavLink to="/hotels" activeClassName={styles.active}>
-                        <img className={styles.bed} src={bed} alt="Bed icon" />
+                        <img className={styles.bed} src={hotelbed} alt="Bed icon" />
                     </NavLink>
                     <NavLink to="/contact" activeClassName={styles.active}>
                         <img className={styles.contact} src={contact} alt="Letter icon" />
@@ -38,24 +38,20 @@ function Nav() {
 
                     {auth ? (
                         <>
-                            <NavLink to="/admin" activeClassName={styles.active}>
-                                <img className={styles.loginactive} src={loginactive} alt="Login icon" />
-                            </NavLink>
+                            <img className={styles.loggingout} src={loggingout} alt="Logout icon" onClick={logout} title="Click to log out" />
+
                             <div className={styles.border}></div>
-                            <button className={styles.logoutBtn} onClick={logout}>
-                                Log out
-                            </button>
-                            <NavLink to="/messages" activeClassName={styles.active}>
-                                <img className={styles.bed} src={messages} alt="letter icon" />
-                                {/* <button className={styles.adminBtns}>Customer Messages</button> */}
+
+                            <p className={styles.admintext}>Admin panel</p>
+
+                            <NavLink to="/messages" activeClassName={styles.adminactive}>
+                                <img className={styles.adminIcon} src={messages} alt="letter icon" />
                             </NavLink>
                             <NavLink to="/bookings" activeClassName={styles.adminactive}>
-                                <img className={styles.bed} src={bookings} alt="bed icon" />
-                                {/* <button className={styles.adminBtns}>Customer Bookings</button> */}
+                                <img className={styles.adminIcon} src={bookings} alt="bed icon" />
                             </NavLink>
                             <NavLink to="/establishments" activeClassName={styles.adminactive}>
-                                <img className={styles.bed} src={newhotel} alt="house icon" />
-                                {/* <button className={styles.adminBtns}>New Establishments</button> */}
+                                <img className={styles.adminIcon} src={newhotel} alt="house icon" />
                             </NavLink>
                         </>
                     ) : (

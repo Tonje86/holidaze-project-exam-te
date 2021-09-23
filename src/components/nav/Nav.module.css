@@ -3,7 +3,7 @@
 }
 
 .border {
-    border-bottom: 1px solid var(--dark-brown);
+    border-bottom: 1px solid var(--mustard);
     width: 100%;
     margin-top: 20px;
 }
@@ -26,73 +26,51 @@
 
 .bed:hover,
 .contact:hover,
-.login:hover,
-.loginactive:hover {
+.login:hover {
     cursor: pointer;
-    border: 2px solid var(--dark-brown);
+    border-bottom: 3px solid var(--mustard);
     border-radius: 3px;
     padding: 10px;
 }
 
 .active {
-    border-bottom: 2px solid var(--mustard);
+    border-bottom: 3px solid var(--mustard);
 }
 
-.loginactive {
-    max-width: 80px;
+/*------------------------------ Admin icons nav ----------------------------- */
+
+.admintext {
+    margin: 10px 0px 0px 20px;
+    font-size: 20px;
+    color: var(--dark-brown);
+    padding: 0px;
+}
+
+.loggingout {
+    max-width: 100px;
     padding: 20px;
 }
 
-.logoutBtn {
-    all: unset;
+.adminIcon {
+    max-width: 100px;
+    padding: 15px;
+    margin: 10px;
+}
+
+.adminIcon:hover,
+.loggingout:hover {
     cursor: pointer;
-    display: block;
-    background-color: #fff;
-    color: var(--dark-brown);
-    text-align: center;
-    border: 1px solid var(--dark-brown);
-    border-radius: 5px;
-    font-weight: 500;
+    border: 2px solid var(--dark-brown);
+    border-radius: 3px;
+    margin: 0px;
     padding: 10px;
-    width: 140px;
-    margin-top: 20px;
-    margin-left: 20px;
 }
 
-.logoutBtn:hover {
-    background-color: var(--mustard);
-}
-
-/*------------------------------ Admin nav ----------------------------- */
-
-.adminBtns {
-    all: unset;
-    background-color: #fff;
-    color: var(--dark-orange);
-    border: 1px solid var(--dark-orange);
-    border-radius: 5px;
-    padding: 10px;
-    margin: 20px;
-    cursor: pointer;
-}
-
-.adminBtns:hover {
-    background-color: var(--dark-orange);
-    color: #fff;
-}
-
-.adminactive button {
-    border: 2px solid var(--dark-orange);
-    font-weight: 500;
+.adminactive {
+    border-top: 2px solid var(--dark-brown);
 }
 
 /*------------------------------------ Smaller screens----------------------------------- */
-
-@media screen and (max-width: 700px) {
-    .adminBtns {
-        display: block;
-    }
-}
 
 @media screen and (max-width: 500px) {
     .bed,
@@ -100,8 +78,13 @@
         width: 90px;
     }
 
-    .login {
+    .login,
+    .adminIcon {
         width: 70px;
+    }
+
+    .loggingout {
+        width: 90px;
     }
 
     .logo {
@@ -123,7 +106,7 @@
         width: 110px;
     }
 
-    .loginactive {
+    .loggingout {
         width: 70px;
     }
 }

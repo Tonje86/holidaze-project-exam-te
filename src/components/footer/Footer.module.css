@@ -1,5 +1,5 @@
 .footer {
-    border-top: 1px solid var(--dark-brown);
+    /* border-top: 1px solid var(--dark-brown); */
     padding: 1rem;
     background-color: var(--mustard);
     position: absolute;
@@ -17,8 +17,9 @@
 .footerLi {
     list-style-type: none;
     margin-top: 20px;
+    color: #fff;
 }
 
 .footerLi:hover {
-    color: #fff;
+    font-weight: 500;
 }
