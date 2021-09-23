@@ -57,7 +57,7 @@ export default function LoginForm() {
     }
 
     return (
-        <div>
+        <>
             <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
                 <MainHeading title="Admin login" />
                 {loginError && <span>Wrong username and/or password</span>}
@@ -76,6 +76,6 @@ export default function LoginForm() {
 
                 <button className={styles.loginBtn}>{submitting ? "Loggin in..." : "Login"}</button>
             </form>
-        </div>
+        </>
     );
 }

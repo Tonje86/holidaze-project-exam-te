@@ -18,7 +18,7 @@
     background-color: var(--hotelCardBg);
     border: 1px solid var(--dark-brown);
     border-radius: 5px;
-    width: 70%;
+    width: 80%;
     max-width: 700px;
     min-width: 300px;
     margin: 20px auto;

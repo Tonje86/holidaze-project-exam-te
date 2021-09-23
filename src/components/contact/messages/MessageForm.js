@@ -6,7 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { HK_MESSAGE } from "../../../constants/api";
 import MainHeading from "../../../typography/MainHeading";
-import styles from "./Message.module.css";
+import styles from "./MessageForm.module.css";
 
 const schema = yup.object().shape({
     firstname: yup.string().required("Please fill in your first name").min(2, "The first name must be at least 2 characters"),
@@ -15,7 +15,7 @@ const schema = yup.object().shape({
     message: yup.string().required("Please enter your message").min(10, "The message must be at least 10 characters"),
 });
 
-function AddMessage() {
+function MessageForm() {
     const [submitting, setSubmitting] = useState(false);
     const [serverError, setServerError] = useState(null);
 
@@ -50,32 +50,30 @@ function AddMessage() {
     return (
         <>
             {submitting}
-            <div className={styles.messageForm}>
+            <form className={styles.messageForm} onSubmit={handleSubmit(onSubmit)}>
+                {serverError && <p>{serverError}</p>}
                 <MainHeading title="Message us" />
-                <form onSubmit={handleSubmit(onSubmit)}>
-                    {serverError && <p>{serverError}</p>}
 
-                    <label>First name</label>
-                    {errors.firstname && <span>{errors.firstname.message}</span>}
-                    <input {...register("firstname")}></input>
+                <label>First name</label>
+                {errors.firstname && <span>{errors.firstname.message}</span>}
+                <input {...register("firstname")}></input>
 
-                    <label>Last name</label>
-                    {errors.lastname && <span>{errors.lastname.message}</span>}
-                    <input {...register("lastname")}></input>
+                <label>Last name</label>
+                {errors.lastname && <span>{errors.lastname.message}</span>}
+                <input {...register("lastname")}></input>
 
-                    <label>Email</label>
-                    {errors.email && <span>{errors.email.message}</span>}
-                    <input {...register("email")}></input>
+                <label>Email</label>
+                {errors.email && <span>{errors.email.message}</span>}
+                <input {...register("email")}></input>
 
-                    <label>Your message</label>
-                    {errors.message && <span>{errors.message.message}</span>}
-                    <textarea {...register("message")}></textarea>
+                <label>Your message</label>
+                {errors.message && <span>{errors.message.message}</span>}
+                <textarea {...register("message")}></textarea>
 
-                    <button className={styles.submitBtn}>Submit</button>
-                </form>
-            </div>
+                <button className={styles.submitBtn}>Submit</button>
+            </form>
         </>
     );
 }
 
-export default AddMessage;
+export default MessageForm;

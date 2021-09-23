@@ -3,8 +3,10 @@ form {
 }
 
 .messageForm {
-    width: 70%;
+    width: 100%;
+    max-width: 700px;
     margin: 0px auto;
+    padding: 10px;
 }
 
 .messageForm label,
@@ -33,14 +35,15 @@ form {
     cursor: pointer;
     width: 100%;
     min-width: 300px;
+    max-width: 700px;
     text-align: center;
     background-color: var(--mustard);
     color: #fff;
     border-radius: 5px;
     padding: 10px 0px;
-    margin-top: 20px;
-    margin-bottom: 40px;
     font-size: 20px;
+    margin: 40px auto;
+    display: block;
 }
 
 .submitBtn:hover {

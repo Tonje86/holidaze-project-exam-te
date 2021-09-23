@@ -78,9 +78,12 @@
         width: 90px;
     }
 
-    .login,
-    .adminIcon {
+    .login {
         width: 70px;
+    }
+
+    .adminIcon {
+        width: 80px;
     }
 
     .loggingout {

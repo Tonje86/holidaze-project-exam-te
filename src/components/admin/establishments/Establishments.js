@@ -49,7 +49,8 @@ const Establishment = () => {
                 free_wifi: data.free_wifi,
             };
 
-            const inputValue = await http.post({
+            const inputValue = await http({
+                method: "POST",
                 url: "hotels",
                 data: formDataToSend,
             });
@@ -62,7 +63,8 @@ const Establishment = () => {
             formData.append("refId", id);
             formData.append("field", "images");
 
-            const res = await http.post({
+            const res = await http({
+                method: "POST",
                 url: "upload",
                 data: formData,
             });

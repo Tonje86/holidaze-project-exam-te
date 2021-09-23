@@ -6,41 +6,6 @@
     color: var(--dark-orange);
 }
 
-.detailCard {
-    background-color: var(--hotelCardBg);
-    border: 1px solid var(--mustard);
-    border-radius: 5px;
-    width: 100%;
-    max-width: 700px;
-    min-width: 200px;
-    margin: 0 auto;
-    padding: 15px 30px;
-}
-
-.price {
-    display: block;
-    font-size: 20px;
-    font-weight: 600;
-    margin: 20px 0px;
-    text-align: right;
-    border-top: 1px solid var(--mustard);
-    padding-top: 10px;
-}
-
-li .price {
-    margin-top: 20px;
-}
-
-.detailListUl {
-    color: var(--dark-orange);
-    padding: 0px;
-}
-
-.detailListLi {
-    list-style-type: none;
-    padding: 5px;
-}
-
 .bookForm {
     background-color: #fff;
     border: 1px solid rgb(204, 204, 204);
@@ -48,7 +13,7 @@ li .price {
     width: 50%;
     min-width: 300px;
     margin: 40px auto;
-    padding: 40px;
+    padding: 20px;
 }
 
 .bookingForm label,
@@ -83,4 +48,39 @@ li .price {
 
 .submitBtn:hover {
     background-color: var(--submitColor);
+}
+
+.detailCard {
+    background-color: var(--hotelCardBg);
+    border: 1px solid var(--mustard);
+    border-radius: 5px;
+    width: 100%;
+    max-width: 700px;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 15px 30px;
+}
+
+.price {
+    display: block;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px 0px;
+    text-align: right;
+    border-top: 1px solid var(--mustard);
+    padding-top: 10px;
+}
+
+li .price {
+    margin-top: 20px;
+}
+
+.detailListUl {
+    color: var(--dark-orange);
+    padding: 0px;
+}
+
+.detailListLi {
+    list-style-type: none;
+    padding: 5px;
 }

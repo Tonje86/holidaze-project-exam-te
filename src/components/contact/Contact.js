@@ -1,12 +1,13 @@
-import AddMessage from "./messages/Message";
+// import AddMessage from "./messages/Message";
 import MainHeading from "../../typography/MainHeading";
+import MessageForm from "./messages/MessageForm";
 import styles from "./Contact.module.css";
 
 function Contact() {
     return (
         <>
             <div>
-                <AddMessage />
+                <MessageForm />
 
                 <div className={styles.contactCards}>
                     <MainHeading title="Call us" />
