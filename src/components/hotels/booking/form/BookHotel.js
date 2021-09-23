@@ -142,7 +142,7 @@ function BookHotel() {
                     {errors.email && <span>{errors.email.message}</span>}
                     <input {...register("email")}></input>
 
-                    <button className={styles.submitBtn}>Book</button>
+                    <button className={styles.submitBtn}>{submitting ? "Booking..." : "Book"}</button>
 
                     <SubHeading title="Details" />
                     <div className={styles.detailCard}>

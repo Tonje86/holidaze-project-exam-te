@@ -70,7 +70,7 @@ function MessageForm() {
                 {errors.message && <span>{errors.message.message}</span>}
                 <textarea {...register("message")}></textarea>
 
-                <button className={styles.submitBtn}>Submit</button>
+                <button className={styles.submitBtn}>{submitting ? "Submitting..." : "Submit"}</button>
             </form>
         </>
     );

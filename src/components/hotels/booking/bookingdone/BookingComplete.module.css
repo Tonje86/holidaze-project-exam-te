@@ -1,17 +1,19 @@
 .container {
-    width: 50%;
+    width: 100%;
+    max-width: 700px;
     margin: 20px auto;
+    padding: 40px;
 }
 
 .returnBtn {
     all: unset;
     cursor: pointer;
-    width: 96%;
+    width: 100%;
     text-align: center;
     background-color: var(--mustard);
     color: #fff;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 0px;
     font-size: 20px;
     margin: 40px auto;
     justify-content: center;

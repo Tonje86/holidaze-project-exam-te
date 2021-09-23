@@ -1,39 +1,39 @@
 .container {
-    width: 50%;
+    width: 100%;
+    max-width: 700px;
     margin: 20px auto;
+    padding: 40px;
 }
 
 .newEstablishmentsBtn {
     all: unset;
     cursor: pointer;
-    width: 96%;
+    width: 100%;
     text-align: center;
     background-color: var(--mustard);
     color: #fff;
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 0px;
     font-size: 18px;
-    margin: 20px auto;
-    justify-content: center;
+    margin-top: 40px;
 }
 
-.newEstablishments:hover,
+.newEstablishmentsBtn:hover,
 .returnBtn:hover {
-    background-color: var(--dark-orange);
+    background-color: var(--dark-brown);
     color: #fff;
 }
 
 .returnBtn {
     all: unset;
     cursor: pointer;
-    width: 96%;
+    width: 100%;
     text-align: center;
     background-color: #fff;
     color: var(--mustard);
     border: 1px solid var(--mustard);
     border-radius: 5px;
-    padding: 10px;
+    padding: 10px 0px;
     font-size: 18px;
-    margin: 20px auto;
-    justify-content: center;
+    margin-top: 40px;
 }
