@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styles from "./Hotels.module.css";
 
-function HotelItem({ id, images, name, price, location, alternative_text }) {
+export default function HotelItem({ id, images, name, price, location, alternative_text }) {
     return (
         <div>
             <img src={images[0].url} alt={alternative_text} className={styles.detailImg} />
@@ -18,5 +18,3 @@ function HotelItem({ id, images, name, price, location, alternative_text }) {
         </div>
     );
 }
-
-export default HotelItem;

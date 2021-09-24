@@ -31,7 +31,6 @@ function App() {
                         <Route path="/detail/:id">
                             <HotelDetails />
                         </Route>
-
                         <Route path="/booking/:id">
                             <BookHotel />
                         </Route>
