@@ -20,8 +20,11 @@ html {
 }
 
 body {
-    background-color: #f8f5f1;
-    background-image: url("./images//background.png");
+    /* background-color: #f8f5f1;
+    background-image: url("./images//background.png"); */
+    background: rgb(255, 255, 255);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(233, 233, 233, 1) 21%);
+
     background-size: cover;
     max-width: 1400px;
     margin: 0 auto;
@@ -34,6 +37,10 @@ h2 {
 
 a {
     text-decoration: none;
+}
+
+fieldset {
+    border: none;
 }
 
 /*

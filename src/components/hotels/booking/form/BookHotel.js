@@ -110,51 +110,52 @@ function BookHotel() {
 
     return (
         <>
-            {submitting}
-            <form className={styles.bookForm} onSubmit={handleSubmit(onSubmit)}>
-                {serverError && <p>{serverError}</p>}
-                <Link to={`../detail/${id}`} className={styles.backLink}>
-                    Back to hotel details
-                </Link>
-                <MainHeading title={hotel.name} />
-                <div className={styles.bookingForm}>
-                    <label>Arrival</label>
-                    {errors.fromdate && <span>{errors.fromdate.message}</span>}
-                    <input name="fromdate" type="date" {...register("fromdate")}></input>
+            <fieldset disabled={submitting}>
+                <form className={styles.bookForm} onSubmit={handleSubmit(onSubmit)}>
+                    {serverError && <p>{serverError}</p>}
+                    <Link to={`../detail/${id}`} className={styles.backLink}>
+                        Back to hotel details
+                    </Link>
+                    <MainHeading title={hotel.name} />
+                    <div className={styles.bookingForm}>
+                        <label>Arrival</label>
+                        {errors.fromdate && <span>{errors.fromdate.message}</span>}
+                        <input name="fromdate" type="date" {...register("fromdate")}></input>
 
-                    <label>Departure</label>
-                    {errors.todate && <span>{errors.todate.message}</span>}
-                    <input name="todate" type="date" {...register("todate")}></input>
+                        <label>Departure</label>
+                        {errors.todate && <span>{errors.todate.message}</span>}
+                        <input name="todate" type="date" {...register("todate")}></input>
 
-                    <label>First name</label>
-                    {errors.firstname && <span>{errors.firstname.message}</span>}
-                    <input name="firstname" {...register("firstname")}></input>
+                        <label>First name</label>
+                        {errors.firstname && <span>{errors.firstname.message}</span>}
+                        <input name="firstname" {...register("firstname")}></input>
 
-                    <label>Last name</label>
-                    {errors.lastname && <span>{errors.lastname.message}</span>}
-                    <input name="lastname" {...register("lastname")}></input>
+                        <label>Last name</label>
+                        {errors.lastname && <span>{errors.lastname.message}</span>}
+                        <input name="lastname" {...register("lastname")}></input>
 
-                    <label>Phone number</label>
-                    {errors.phone && <span>{errors.phone.message}</span>}
-                    <input {...register("phone")}></input>
+                        <label>Phone number</label>
+                        {errors.phone && <span>{errors.phone.message}</span>}
+                        <input {...register("phone")}></input>
 
-                    <label>Email</label>
-                    {errors.email && <span>{errors.email.message}</span>}
-                    <input {...register("email")}></input>
+                        <label>Email</label>
+                        {errors.email && <span>{errors.email.message}</span>}
+                        <input {...register("email")}></input>
 
-                    <button className={styles.submitBtn}>{submitting ? "Booking..." : "Book"}</button>
+                        <button className={styles.submitBtn}>{submitting ? "Booking..." : "Book"}</button>
 
-                    <SubHeading title="Details" />
-                    <div className={styles.detailCard}>
-                        <ul className={styles.detailListUl}>
-                            <li className={styles.detailListLi}>- {hotel.location}</li>
-                            <li className={styles.detailListLi}>- {hotel.breakfast_included}</li>
-                            <li className={styles.detailListLi}>- Roomsize: {hotel.roomsize}kvm</li>
-                            <li className={styles.price}>Price: {hotel.price} NOK</li>
-                        </ul>
+                        <SubHeading title="Details" />
+                        <div className={styles.detailCard}>
+                            <ul className={styles.detailListUl}>
+                                <li className={styles.detailListLi}>- {hotel.location}</li>
+                                <li className={styles.detailListLi}>- {hotel.breakfast_included}</li>
+                                <li className={styles.detailListLi}>- Roomsize: {hotel.roomsize}kvm</li>
+                                <li className={styles.price}>Price: {hotel.price} NOK</li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-            </form>
+                </form>
+            </fieldset>
         </>
     );
 }

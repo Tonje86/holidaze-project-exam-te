@@ -43,6 +43,7 @@
     color: #fff;
     margin: 20px auto;
     text-align: center;
+    border: 1px solid var(--dark-brown);
     border-radius: 5px;
     padding: 15px;
     width: 90%;

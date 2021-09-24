@@ -32,7 +32,7 @@ function HotelDetails() {
                         console.log(json);
                         setHotel(json);
                     } else {
-                        setError("Sett inn message her");
+                        setError("Error");
                     }
                 } catch (error) {
                     setError(error.toString());
@@ -72,7 +72,7 @@ function HotelDetails() {
                 <Link to="/hotels" className={styles.backLink}>
                     Back to all hotels
                 </Link>
-                <img src={hotel.images[0].url} alt={hotel.images[0].alternativeText} className={styles.detailCardImg} />
+                <img src={hotel.images[0].url} alt={hotel.alternative_text} className={styles.detailCardImg} />
                 <p>{hotel.description}</p>
                 <ul className={styles.detailListUl}>
                     <li className={styles.detailListLi}>{hotel.location}</li>

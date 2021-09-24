@@ -24,7 +24,7 @@ export default function CallHotels() {
                     setError("Error");
                 }
             } catch (error) {
-                setError(error.toString());
+                setError(error);
             } finally {
                 setLoading(false);
             }

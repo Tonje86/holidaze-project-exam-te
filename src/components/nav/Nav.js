@@ -60,7 +60,6 @@ function Nav() {
                         </NavLink>
                     )}
                 </div>
-                {/* <div className={styles.border}></div> */}
             </nav>
         </>
     );

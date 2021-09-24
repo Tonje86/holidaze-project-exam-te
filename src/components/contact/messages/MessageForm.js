@@ -49,29 +49,30 @@ function MessageForm() {
 
     return (
         <>
-            {submitting}
-            <form className={styles.messageForm} onSubmit={handleSubmit(onSubmit)}>
-                {serverError && <p>{serverError}</p>}
-                <MainHeading title="Message us" />
+            <fieldset disabled={submitting}>
+                <form className={styles.messageForm} onSubmit={handleSubmit(onSubmit)}>
+                    {serverError && <p>{serverError}</p>}
+                    <MainHeading title="Message us" />
 
-                <label>First name</label>
-                {errors.firstname && <span>{errors.firstname.message}</span>}
-                <input {...register("firstname")}></input>
+                    <label>First name</label>
+                    {errors.firstname && <span>{errors.firstname.message}</span>}
+                    <input {...register("firstname")}></input>
 
-                <label>Last name</label>
-                {errors.lastname && <span>{errors.lastname.message}</span>}
-                <input {...register("lastname")}></input>
+                    <label>Last name</label>
+                    {errors.lastname && <span>{errors.lastname.message}</span>}
+                    <input {...register("lastname")}></input>
 
-                <label>Email</label>
-                {errors.email && <span>{errors.email.message}</span>}
-                <input {...register("email")}></input>
+                    <label>Email</label>
+                    {errors.email && <span>{errors.email.message}</span>}
+                    <input {...register("email")}></input>
 
-                <label>Your message</label>
-                {errors.message && <span>{errors.message.message}</span>}
-                <textarea {...register("message")}></textarea>
+                    <label>Your message</label>
+                    {errors.message && <span>{errors.message.message}</span>}
+                    <textarea {...register("message")}></textarea>
 
-                <button className={styles.submitBtn}>{submitting ? "Submitting..." : "Submit"}</button>
-            </form>
+                    <button className={styles.submitBtn}>{submitting ? "Submitting..." : "Submit"}</button>
+                </form>
+            </fieldset>
         </>
     );
 }

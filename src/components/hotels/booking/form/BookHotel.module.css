@@ -40,6 +40,7 @@
     text-align: center;
     background-color: var(--mustard);
     color: #fff;
+    border: 1px solid var(--dark-brown);
     border-radius: 5px;
     padding: 10px 0px;
     margin: 20px auto;
