@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { useParams, useHistory, Link } from "react-router-dom";
 import { HOTEL_URL } from "../../../constants/api";
+import axios from "axios";
 import Loading from "../../common/loading/Loading";
 import Error from "../../common/error/Error";
 import MainHeading from "../../../typography/MainHeading";
@@ -21,37 +22,27 @@ function HotelDetails() {
 
     const hotelDetailUrl = HOTEL_URL + "/" + id;
 
-    useEffect(
-        function () {
-            async function fetchData() {
-                try {
-                    const response = await fetch(hotelDetailUrl);
-
-                    if (response.ok) {
-                        const json = await response.json();
-                        console.log(json);
-                        setHotel(json);
-                    } else {
-                        setError("Error");
-                    }
-                } catch (error) {
-                    setError(error.toString());
-                } finally {
-                    setLoading(false);
-                }
+    useEffect(function () {
+        async function getHotelDetails() {
+            try {
+                const response = await axios.get(hotelDetailUrl);
+                console.log("response", response);
+                setHotel(response.data);
+            } catch (error) {
+                console.log(error);
+                setError(error);
+            } finally {
+                setLoading(false);
             }
-            fetchData();
-        },
-        [hotelDetailUrl]
-    );
+        }
 
-    if (loading) {
-        return <Loading />;
-    }
+        getHotelDetails();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    if (error) {
-        return <Error />;
-    }
+    if (error) return <Error />;
+
+    if (loading) return <Loading />;
 
     if (hotel.breakfast_included === true) {
         hotel.breakfast_included = "Breakfast included";

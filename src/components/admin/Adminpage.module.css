@@ -1,9 +1,24 @@
-.heading h1 {
-    font-size: 80px;
+.container {
+    width: 100%;
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 40px;
+}
+
+.adminWelcome {
+    background-color: #fff;
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.container .adminWelcome h1 {
+    font-size: 60px;
+    line-height: 120%;
 }
 
 @media screen and (max-width: 500px) {
-    .heading h1 {
+    .container .adminWelcome h1 {
         font-size: 50px;
     }
 }

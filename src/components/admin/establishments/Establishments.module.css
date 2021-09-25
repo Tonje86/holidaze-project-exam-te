@@ -3,6 +3,9 @@
     max-width: 700px;
     margin: 0px auto;
     padding: 20px;
+    background-color: #fff;
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
 }
 
 .hotelForm label {
@@ -19,7 +22,7 @@
     margin: 10px auto;
     display: block;
     width: 100%;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 700px;
 }
 
@@ -27,24 +30,20 @@
     all: unset;
     cursor: pointer;
     width: 100%;
+    min-width: 200px;
+    max-width: 700px;
     text-align: center;
     background-color: var(--mustard);
     color: #fff;
     border: 1px solid var(--dark-brown);
     border-radius: 5px;
     padding: 10px 0px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 40px;
     font-size: 20px;
 }
 
 .submitBtn:hover {
     background-color: var(--submitColor);
-}
-
-span {
-    color: red;
-    font-weight: 600;
 }
 
 .radioBtns {
@@ -53,7 +52,7 @@ span {
     border-radius: 5px;
     margin-top: 10px;
     padding: 10px;
-    min-width: 300px;
+    min-width: 200px;
     display: flex;
 }
 
@@ -87,6 +86,12 @@ span {
 }
 
 /*-------------------------------- Responsive --------------------------------------*/
+
+@media screen and (max-width: 700px) {
+    .hotelForm {
+        width: 90%;
+    }
+}
 
 @media screen and (max-width: 500px) {
     .radioBtns label {

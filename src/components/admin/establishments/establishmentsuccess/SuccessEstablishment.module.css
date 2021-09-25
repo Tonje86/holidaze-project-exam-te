@@ -11,6 +11,7 @@
     width: 100%;
     text-align: center;
     background-color: var(--mustard);
+    border: 1px solid var(--dark-brown);
     color: #fff;
     border-radius: 5px;
     padding: 10px 0px;
@@ -31,7 +32,7 @@
     text-align: center;
     background-color: #fff;
     color: var(--mustard);
-    border: 1px solid var(--mustard);
+    border: 1px solid var(--dark-brown);
     border-radius: 5px;
     padding: 10px 0px;
     font-size: 18px;

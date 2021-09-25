@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import axios from "axios";
 import { HOTEL_URL } from "../../constants/api";
 import SearchHotels from "./SearchHotels";
 import Loading from "../common/loading/Loading";
@@ -12,35 +13,28 @@ export default function CallHotels() {
     const [error, setError] = useState(null);
 
     useEffect(function () {
-        async function fetchData() {
+        async function getHotels() {
             try {
-                const response = await fetch(HOTEL_URL + "?_sort=name:ASC");
-
-                if (response.ok) {
-                    const json = await response.json();
-                    console.log(json);
-                    setHotels(json);
-                } else {
-                    setError("Error");
-                }
+                const response = await axios.get(HOTEL_URL + "?_sort=name:ASC");
+                console.log("response", response);
+                setHotels(response.data);
             } catch (error) {
+                console.log(error);
                 setError(error);
             } finally {
                 setLoading(false);
             }
         }
-        fetchData();
+
+        getHotels();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
+    if (error) return <Error />;
+
+    if (loading) return <Loading />;
+
     const filteredHotels = search.length === 0 ? hotels : hotels.filter((hotel) => hotel.name.toLowerCase().includes(search.toLowerCase()));
-
-    if (loading) {
-        return <Loading />;
-    }
-
-    if (error) {
-        return <Error />;
-    }
 
     return (
         <div>

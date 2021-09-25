@@ -5,6 +5,7 @@ import useAxios from "../../../hooks/useAxios";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import MainHeading from "../../../typography/MainHeading";
+import ValError from "../../common/error/ValError";
 import styles from "./Establishments.module.css";
 
 const schema = yup.object().shape({
@@ -84,7 +85,10 @@ const Establishment = () => {
 
             history.push("/establishmentsuccess");
         } catch (error) {
-            console.log(error);
+            console.log("error", error);
+            setServerError(error.toString());
+        } finally {
+            setSubmitting(false);
         }
     };
 
@@ -94,7 +98,7 @@ const Establishment = () => {
             <div className={styles.hotelForm}>
                 <fieldset disabled={submitting}>
                     <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
-                        {serverError && <p>{serverError}</p>}
+                        {serverError && <ValError>{serverError}</ValError>}
 
                         <label>Image (max 200kb)</label>
                         {errors.file && <span>{errors.file.message}</span>}

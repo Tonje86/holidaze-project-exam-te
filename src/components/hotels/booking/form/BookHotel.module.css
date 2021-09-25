@@ -88,6 +88,6 @@ li .price {
 
 @media screen and (max-width: 700px) {
     .bookForm {
-        width: 80%;
+        width: 100%;
     }
 }

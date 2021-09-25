@@ -7,6 +7,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import Loading from "../../../common/loading/Loading";
 import Error from "../../../common/error/Error";
+import ValError from "../../../common/error/ValError";
 import MainHeading from "../../../../typography/MainHeading";
 import SubHeading from "../../../../typography/SubHeading";
 import styles from "../../booking/form/BookHotel.module.css";
@@ -46,37 +47,27 @@ function BookHotel() {
 
     const getHotelUrl = HOTEL_URL + "/" + id;
 
-    useEffect(
-        function () {
-            async function fetchHotel() {
-                try {
-                    const response = await fetch(getHotelUrl);
-
-                    if (response.ok) {
-                        const json = await response.json();
-                        console.log(json);
-                        setHotel(json);
-                    } else {
-                        setError("Error");
-                    }
-                } catch (error) {
-                    setError(error.toString());
-                } finally {
-                    setLoading(false);
-                }
+    useEffect(function () {
+        async function fetchHotels() {
+            try {
+                const response = await axios.get(getHotelUrl);
+                console.log("response", response);
+                setHotel(response.data);
+            } catch (error) {
+                console.log(error);
+                setError(error);
+            } finally {
+                setLoading(false);
             }
-            fetchHotel();
-        },
-        [getHotelUrl]
-    );
+        }
 
-    if (loading) {
-        return <Loading />;
-    }
+        fetchHotels();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
-    if (error) {
-        return <Error />;
-    }
+    if (error) return <Error />;
+
+    if (loading) return <Loading />;
 
     async function onSubmit(data) {
         setSubmitting(true);
@@ -112,7 +103,7 @@ function BookHotel() {
         <>
             <fieldset disabled={submitting}>
                 <form className={styles.bookForm} onSubmit={handleSubmit(onSubmit)}>
-                    {serverError && <p>{serverError}</p>}
+                    {serverError && <ValError>{serverError}</ValError>}
                     <Link to={`../detail/${id}`} className={styles.backLink}>
                         Back to hotel details
                     </Link>

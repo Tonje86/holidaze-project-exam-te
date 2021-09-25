@@ -5,8 +5,12 @@ form {
 .messageForm {
     width: 100%;
     max-width: 700px;
-    margin: 0px auto;
-    padding: 20px;
+    min-width: 300px;
+    margin: 40px auto;
+    padding: 40px;
+    background-color: #fff;
+    border: 1px solid var(--dark-brown);
+    border-radius: 5px;
 }
 
 .messageForm label,
@@ -15,7 +19,7 @@ form {
     display: block;
     width: 100%;
     margin: 10px auto;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 700px;
 }
 
@@ -34,7 +38,7 @@ form {
     all: unset;
     cursor: pointer;
     width: 100%;
-    min-width: 300px;
+    min-width: 200px;
     max-width: 700px;
     text-align: center;
     border: 1px solid var(--dark-brown);
