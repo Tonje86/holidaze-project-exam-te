@@ -1,7 +1,6 @@
 .footer {
     padding: 1rem;
     background-color: var(--dark-brown);
-    /* border-top: 1px solid var(--dark-brown); */
     position: absolute;
     bottom: 0;
     left: 0;

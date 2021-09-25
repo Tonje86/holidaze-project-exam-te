@@ -29,7 +29,7 @@ function HotelDetails() {
 
                     if (response.ok) {
                         const json = await response.json();
-                        // console.log(json);
+                        console.log(json);
                         setHotel(json);
                     } else {
                         setError("Error");

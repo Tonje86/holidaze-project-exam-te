@@ -16,7 +16,7 @@ function CustomerBookings() {
         async function fetchData() {
             try {
                 const response = await http.get("bookings?_sort=published_at:DESC");
-                // console.log("response", response);
+                console.log("response", response);
                 setBookings(response.data);
             } catch (error) {
                 setError(error.toString());

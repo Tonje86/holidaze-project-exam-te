@@ -80,11 +80,11 @@ const Establishment = () => {
                 data: formData,
             });
 
-            // console.log("Success", response);
+            console.log("Success", response);
 
             history.push("/establishmentsuccess");
         } catch (error) {
-            // console.log(error);
+            console.log(error);
         }
     };
 
