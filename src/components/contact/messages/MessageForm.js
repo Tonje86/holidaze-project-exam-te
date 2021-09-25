@@ -33,14 +33,14 @@ function MessageForm() {
         setSubmitting(true);
         setServerError(null);
 
-        console.log(data);
+        // console.log(data);
 
         try {
             const response = await axios.post(HK_MESSAGE, data);
-            console.log("response", response.data);
+            // console.log("response", response.data);
             history.push("/successmessage");
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             setServerError(error.toString());
         } finally {
             setSubmitting(false);

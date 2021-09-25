@@ -16,7 +16,7 @@ function CustomerMessages() {
         async function fetchData() {
             try {
                 const response = await http.get("messages?_sort=published_at:DESC");
-                console.log("response", response);
+                // console.log("response", response);
                 setMessages(response.data);
             } catch (error) {
                 setError(error.toString());

@@ -18,7 +18,7 @@ export default function CallHotels() {
 
                 if (response.ok) {
                     const json = await response.json();
-                    console.log(json);
+                    // console.log(json);
                     setHotels(json);
                 } else {
                     setError("Error");

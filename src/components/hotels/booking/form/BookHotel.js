@@ -54,7 +54,7 @@ function BookHotel() {
 
                     if (response.ok) {
                         const json = await response.json();
-                        console.log(json);
+                        // console.log(json);
                         setHotel(json);
                     } else {
                         setError("Error");
@@ -81,21 +81,21 @@ function BookHotel() {
     async function onSubmit(data) {
         setSubmitting(true);
         setServerError(null);
-        console.log(data);
+        // console.log(data);
 
         const include = {
             name: hotel.name,
             ...data,
         };
 
-        console.log(data);
+        // console.log(data);
 
         try {
             const response = await axios.post(HK_BOOKINGS, include, data);
-            console.log("response", response.data);
+            // console.log("response", response.data);
             history.push("/bookingdone");
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             setServerError(error.toString());
         } finally {
             setSubmitting(false);

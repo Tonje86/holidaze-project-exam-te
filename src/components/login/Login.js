@@ -41,15 +41,15 @@ export default function LoginForm() {
             password: data.password,
         };
 
-        console.log(data);
+        // console.log(data);
 
         try {
             const response = await axios.post(loginUrl, body);
-            console.log("response", response.data);
+            // console.log("response", response.data);
             setAuth(response.data);
             history.push("/admin");
         } catch (error) {
-            console.log("error", error);
+            // console.log("error", error);
             setLoginError(error.toString());
         } finally {
             setSubmitting(false);

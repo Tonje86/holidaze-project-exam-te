@@ -12,13 +12,6 @@ function InfoText() {
                     </Link>{" "}
                     the best stay in Bergen that suits your needs and budget.
                 </p>
-                {/* <p className={styles.infoText}>
-                    You can search and book hotels, bed and breakfast and guesthouses. Do not hesitate to{" "}
-                    <Link to="/contact" className={styles.contactLink}>
-                        contact us
-                    </Link>{" "}
-                    if you have questions.
-                </p> */}
             </div>
         </>
     );
