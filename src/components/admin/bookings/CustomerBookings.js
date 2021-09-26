@@ -19,7 +19,7 @@ function CustomerBookings() {
                 console.log("response", response);
                 setBookings(response.data);
             } catch (error) {
-                setError(error.toString());
+                setError(error);
             } finally {
                 setLoading(false);
             }
@@ -28,14 +28,6 @@ function CustomerBookings() {
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
-
-    if (loading) {
-        return <Loading />;
-    }
-
-    if (error) {
-        return <div>ERROR: Something went wrong </div>;
-    }
 
     if (loading) {
         return <Loading />;

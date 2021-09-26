@@ -19,8 +19,8 @@ export default function CallHotels() {
                 console.log("response", response);
                 setHotels(response.data);
             } catch (error) {
-                console.log(error);
-                setError(error);
+                setError(error.toString());
+                console.log("error", error);
             } finally {
                 setLoading(false);
             }
@@ -30,9 +30,9 @@ export default function CallHotels() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    if (error) return <Error />;
-
     if (loading) return <Loading />;
+
+    if (error) return <Error />;
 
     const filteredHotels = search.length === 0 ? hotels : hotels.filter((hotel) => hotel.name.toLowerCase().includes(search.toLowerCase()));
 

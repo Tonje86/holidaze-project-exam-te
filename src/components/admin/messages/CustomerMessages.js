@@ -19,7 +19,7 @@ function CustomerMessages() {
                 console.log("response", response);
                 setMessages(response.data);
             } catch (error) {
-                setError(error.toString());
+                setError(error);
             } finally {
                 setLoading(false);
             }

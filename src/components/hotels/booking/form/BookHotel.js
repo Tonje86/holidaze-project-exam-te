@@ -7,7 +7,6 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import axios from "axios";
 import Loading from "../../../common/loading/Loading";
 import Error from "../../../common/error/Error";
-import ValError from "../../../common/error/ValError";
 import MainHeading from "../../../../typography/MainHeading";
 import SubHeading from "../../../../typography/SubHeading";
 import styles from "../../booking/form/BookHotel.module.css";
@@ -50,7 +49,7 @@ function BookHotel() {
     useEffect(function () {
         async function fetchHotels() {
             try {
-                const response = await axios.get(getHotelUrl);
+                const response = await axios.get(getHotelUrl + "?_sort=name:ASC");
                 console.log("response", response);
                 setHotel(response.data);
             } catch (error) {
@@ -65,9 +64,9 @@ function BookHotel() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    if (error) return <Error />;
-
     if (loading) return <Loading />;
+
+    if (error) return <Error />;
 
     async function onSubmit(data) {
         setSubmitting(true);
@@ -87,7 +86,7 @@ function BookHotel() {
             history.push("/bookingdone");
         } catch (error) {
             console.log("error", error);
-            setServerError(error.toString());
+            setServerError(error);
         } finally {
             setSubmitting(false);
         }
@@ -103,7 +102,7 @@ function BookHotel() {
         <>
             <fieldset disabled={submitting}>
                 <form className={styles.bookForm} onSubmit={handleSubmit(onSubmit)}>
-                    {serverError && <ValError>{serverError}</ValError>}
+                    {serverError && <Error />}
                     <Link to={`../detail/${id}`} className={styles.backLink}>
                         Back to hotel details
                     </Link>

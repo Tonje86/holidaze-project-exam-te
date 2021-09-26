@@ -40,9 +40,9 @@ function HotelDetails() {
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
-    if (error) return <Error />;
-
     if (loading) return <Loading />;
+
+    if (error) return <Error />;
 
     if (hotel.breakfast_included === true) {
         hotel.breakfast_included = "Breakfast included";

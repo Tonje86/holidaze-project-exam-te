@@ -9,7 +9,9 @@ function Contact() {
             <div className={styles.contactContainer}>
                 <div className={styles.contactCards}>
                     <MainHeading title="Call us" />
-                    <p className={styles.contactText}>+47 123 45 678</p>
+                    <a href="tel: +47 123 45 678">
+                        <p className={styles.contactText}>+47 123 45 678</p>
+                    </a>
                 </div>
 
                 <div className={styles.contactCards}>

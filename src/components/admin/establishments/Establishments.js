@@ -5,7 +5,7 @@ import useAxios from "../../../hooks/useAxios";
 import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import MainHeading from "../../../typography/MainHeading";
-import ValError from "../../common/error/ValError";
+import Error from "../../common/error/Error";
 import styles from "./Establishments.module.css";
 
 const schema = yup.object().shape({
@@ -97,9 +97,8 @@ const Establishment = () => {
             <MainHeading title="Create new establishments" />
             <div className={styles.hotelForm}>
                 <fieldset disabled={submitting}>
+                    {serverError && <Error />}
                     <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
-                        {serverError && <ValError>{serverError}</ValError>}
-
                         <label>Image (max 200kb)</label>
                         {errors.file && <span>{errors.file.message}</span>}
                         <input name="file" type="file" {...register("file")}></input>

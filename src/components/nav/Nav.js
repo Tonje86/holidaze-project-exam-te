@@ -27,18 +27,18 @@ function Nav() {
             <nav className={styles.nav}>
                 <div className={styles.placeNav}>
                     <NavLink exact to="/">
-                        <img className={styles.logo} src={logo} alt="Holidaze logo" />
+                        <img className={styles.logo} src={logo} alt="Holidaze logo" title="Home" />
                     </NavLink>
                     <NavLink to="/hotels" activeClassName={styles.active}>
-                        <img className={styles.bed} src={hotelbed} alt="Bed icon" />
+                        <img className={styles.bed} src={hotelbed} alt="Bed icon" title="Hotels" />
                     </NavLink>
                     <NavLink to="/contact" activeClassName={styles.active}>
-                        <img className={styles.contact} src={contact} alt="Letter icon" />
+                        <img className={styles.contact} src={contact} alt="Letter icon" title="Contact" />
                     </NavLink>
 
                     {auth ? (
                         <>
-                            <img className={styles.loggingout} src={loggingout} alt="Logout icon" onClick={logout} title="Click to log out" />
+                            <img className={styles.loggingout} src={loggingout} alt="Logout icon" onClick={logout} title="Log out" />
 
                             <div className={styles.border}></div>
 
@@ -56,7 +56,7 @@ function Nav() {
                         </>
                     ) : (
                         <NavLink to="/login" activeClassName={styles.active}>
-                            <img className={styles.login} src={login} alt="Login icon" />
+                            <img className={styles.login} src={login} alt="Login icon" title="Log in" />
                         </NavLink>
                     )}
                 </div>

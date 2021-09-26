@@ -1,11 +1,12 @@
 .container {
-    width: 50%;
+    width: 80%;
     max-width: 700px;
     margin: 0 auto;
 }
 
 .textBox {
-    margin-top: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
     padding: 40px;
     border: 1px solid red;
     border-radius: 5px;
@@ -15,9 +16,9 @@
     font-size: clamp(1.3rem, 2.5vw, 2rem);
 }
 
-.valContainer {
+/* .valContainer {
     color: red;
     font-size: 20px;
     padding: 10px;
     font-weight: bold;
-}
+} */
