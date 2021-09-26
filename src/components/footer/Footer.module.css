@@ -23,6 +23,7 @@
     font-size: 18px;
     margin: 0px 60px 0px 10px;
     color: #fff;
+    font-size: 16px;
 }
 
 .footerLi:hover {
@@ -32,6 +33,5 @@
 @media screen and (max-width: 500px) {
     .footerLi {
         margin: 15px;
-        font-size: 16px;
     }
 }

@@ -50,7 +50,7 @@ export default function LoginForm() {
             history.push("/admin");
         } catch (error) {
             console.log("error", error);
-            setLoginError(error.toString());
+            setLoginError(error);
         } finally {
             setSubmitting(false);
         }
@@ -58,24 +58,26 @@ export default function LoginForm() {
 
     return (
         <>
-            <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
-                <MainHeading title="Admin login" />
-                {loginError && <span>Wrong username and/or password</span>}
+            <fieldset disabled={submitting}>
+                <form className={styles.loginForm} onSubmit={handleSubmit(onSubmit)}>
+                    <MainHeading title="Admin login" />
+                    {loginError && <span>Wrong username and/or password</span>}
 
-                <div disabled={submitting}>
-                    <label>Username</label>
-                    {errors.username && <span>{errors.username.message}</span>}
-                    <input type="username" {...register("username")} />
-                </div>
+                    <div>
+                        <label>Username</label>
+                        {errors.username && <span>{errors.username.message}</span>}
+                        <input type="username" {...register("username")} />
+                    </div>
 
-                <div disabled={submitting}>
-                    <label>Password</label>
-                    {errors.password && <span>{errors.password.message}</span>}
-                    <input type="password" {...register("password")} />
-                </div>
+                    <div>
+                        <label>Password</label>
+                        {errors.password && <span>{errors.password.message}</span>}
+                        <input type="password" {...register("password")} />
+                    </div>
 
-                <button className={styles.loginBtn}>{submitting ? "Loggin in..." : "Login"}</button>
-            </form>
+                    <button className={styles.loginBtn}>{submitting ? "Loggin in..." : "Login"}</button>
+                </form>
+            </fieldset>
         </>
     );
 }

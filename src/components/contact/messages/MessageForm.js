@@ -6,7 +6,7 @@ import * as yup from "yup";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { HK_MESSAGE } from "../../../constants/api";
 import MainHeading from "../../../typography/MainHeading";
-import ValError from "../../common/error/ValError";
+import Error from "../../common/error/Error";
 import styles from "./MessageForm.module.css";
 
 const schema = yup.object().shape({
@@ -42,7 +42,7 @@ function MessageForm() {
             history.push("/successmessage");
         } catch (error) {
             console.log("error", error);
-            setServerError(error.toString());
+            setServerError(error);
         } finally {
             setSubmitting(false);
         }
@@ -52,7 +52,7 @@ function MessageForm() {
         <>
             <fieldset disabled={submitting}>
                 <form className={styles.messageForm} onSubmit={handleSubmit(onSubmit)}>
-                    {serverError && <ValError>{serverError}</ValError>}
+                    {serverError && <Error />}
                     <MainHeading title="Message us" />
 
                     <label>First name</label>

@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Roboto:wght@100;300&display=swap");
 
+/*
+font-family: 'Baloo Tammudu 2', cursive;
+font-family: 'Roboto', sans-serif;
+
+
+*/
+
 :root {
     --dark-orange: #a46e02;
     --dark-brown: #433426;
@@ -20,7 +27,7 @@ html {
 }
 
 body {
-    background-color: #f8f5f1;
+    background-color: var(--backgroundColor);
     background-image: url("./images//background.svg");
     background-size: cover;
     background-position: center;
